@@ -579,8 +579,8 @@ public:
 		return abs(a - b) < tolerance;
 	}
 
-	static _ALWAYS_INLINE_ bool is_zero_approx(float s) {
-		return abs(s) < (float)CMP_EPSILON;
+	static _ALWAYS_INLINE_ bool is_zero_approx(float s, float tolerance = (float)CMP_EPSILON) {
+		return abs(s) < tolerance;
 	}
 
 	static _ALWAYS_INLINE_ bool is_equal_approx(double a, double b) {
@@ -605,8 +605,8 @@ public:
 		return abs(a - b) < tolerance;
 	}
 
-	static _ALWAYS_INLINE_ bool is_zero_approx(double s) {
-		return abs(s) < CMP_EPSILON;
+	static _ALWAYS_INLINE_ bool is_zero_approx(double s, double tolerance = CMP_EPSILON) {
+		return abs(s) < tolerance;
 	}
 
 	static _ALWAYS_INLINE_ float absf(float g) {
